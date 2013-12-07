@@ -19,6 +19,7 @@ use Message;
 class MessageObjectBuilder {
 
 	private $context;
+	private $languageType;
 
 	public function __construct( IContextSource $context, $languageType ) {
 		$this->context = $context;
