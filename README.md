@@ -1,17 +1,13 @@
-# DataValues Geo
+# i18n
 
-Library containing value objects to represent geographical information, parsers to turn user input
-into such value objects, and formatters to turn them back into user consumable representations.
+Library that provides a simple internationalization interface. It also
+includes an adapter for the native MediaWiki i18n functionality.
 
-It is part of the [DataValues set of libraries](https://github.com/DataValues).
+[![Build Status](https://secure.travis-ci.org/JeroenDeDauw/i18n.png?branch=master)](http://travis-ci.org/JeroenDeDauw/i18n)
 
-[![Build Status](https://secure.travis-ci.org/DataValues/Geo.png?branch=master)](http://travis-ci.org/DataValues/Geo)
-[![Code Coverage](https://scrutinizer-ci.com/g/DataValues/Geo/badges/coverage.png?s=bf4cfd11f3b985fd05918f395c350b376a9ce0ee)](https://scrutinizer-ci.com/g/DataValues/Geo/)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/DataValues/Geo/badges/quality-score.png?s=e695e42b53d74fc02e5cfa2aa218420f062edbd2)](https://scrutinizer-ci.com/g/DataValues/Geo/)
-
-On [Packagist](https://packagist.org/packages/data-values/geo):
-[![Latest Stable Version](https://poser.pugx.org/data-values/geo/version.png)](https://packagist.org/packages/data-values/geo)
-[![Download count](https://poser.pugx.org/data-values/geo/d/total.png)](https://packagist.org/packages/data-values/geo)
+On [Packagist](https://packagist.org/packages/jeroen-de-dauw/i18n):
+[![Latest Stable Version](https://poser.pugx.org/jeroen-de-dauw/i18n/version.png)](https://packagist.org/packages/jeroen-de-dauw/i18n)
+[![Download count](https://poser.pugx.org/jeroen-de-dauw/i18n/d/total.png)](https://packagist.org/packages/jeroen-de-dauw/i18n)
 
 ## Installation
 
@@ -20,13 +16,13 @@ The recommended way to use this library is via [Composer](http://getcomposer.org
 ### Composer
 
 To add this package as a local, per-project dependency to your project, simply add a
-dependency on `data-values/geo` to your project's `composer.json` file.
+dependency on `jeroen-de-dauw/i18n` to your project's `composer.json` file.
 Here is a minimal example of a `composer.json` file that just defines a dependency on
 version 1.0 of this package:
 
     {
         "require": {
-            "data-values/geo": "1.0.*"
+            "jeroen-de-dauw/i18n": "1.0.*"
         }
     }
 
@@ -38,82 +34,22 @@ Then take care of autoloading the classes defined in the src directory.
 
 ## Library functionality
 
-#### Value objects
-
-These are simple value objects. They all implement the <code>DataValues\DataValue</code> interface.
-
-* <code>LatLongValue</code> - Object representing a geographic point specified by latitude and longitude.
-* <code>GlobeCoordinateValue</code> - Geographical coordinate with precision and globe.
-
-#### Formatters
-
-These turn value objects into string representations.
-They all implement the <code>ValueFormatters\ValueFormatter</code> interface.
-
-* <code>GeoCoordinateFormatter</code> - Formats a LatLongValue into float, decimal minute,
-decimal degree or degree minute second notation. Both directional and non-directional notation
-are supported. Directional labels, latitude-longitude separator and precision can be specified.
-* <code>GlobeCoordinateFormatter</code> - Formats a GlobeCoordinateValue.
-
-#### Parsers
-
-These turn string representations into value objects.
-They all implement the <code>ValueParsers\ValueParser</code> interface.
-
-Simple parsers:
-
-* <code>DdCoordinateParser</code> - Parses decimal degree coordinates into LatLongValue objects.
-* <code>DmCoordinateParser</code> - Parses decimal minute coordinates into LatLongValue objects.
-* <code>DmsCoordinateParser</code> - Parses degree minute second coordinates into LatLongValue objects.
-* <code>FloatCoordinateParser</code> - Parses float coordinates into LatLongValue objects.
-
-Composite parsers:
-
-* <code>GeoCoordinateParser</code> - Facade for DdCoordinateParser, DmCoordinateParser, DmsCoordinateParser
-and FloatCoordinateParser. Parses a coordinate in any of the notations supported by these parsers
-into a LatLongValue object. Both directional and non-directional notation are supported. Directional
-labels and the latitude-longitude separator can be specified.
-* <code>GlobeCoordinateParser</code> - Parses coordinates into GlobeCoordinateValue objects.
-
-## Tests
-
-This library comes with a set up PHPUnit tests that cover all non-trivial code. You can run these
-tests using the PHPUnit configuration file found in the root directory. The tests can also be run
-via TravisCI, as a TravisCI configuration file is also provided in the root directory.
 
 ## Authors
 
-DataValues Geo has been written by the Wikidata team, as [Wikimedia Germany]
-(https://wikimedia.de) employees for the [Wikidata project](https://wikidata.org/).
-
-It is based upon and contains a lot of code written by [Jeroen De Dauw]
-(https://github.com/JeroenDeDauw) for the [Maps](https://github.com/JeroenDeDauw/Maps) and
-[Semantic MediaWiki](https://semantic-mediawiki.org/) projects.
+i18n has been written by [Jeroen De Dauw] (https://github.com/JeroenDeDauw), partially
+as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project](https://wikidata.org/).
 
 ## Release notes
 
-### 0.1.1 (2013-11-30)
-
-* Added support for direction notation to GeoCoordinateFormatter
-* Decreased complexity of GeoCoordinateFormatter
-* Decreased complexity and coupling of GeoCoordinateFormatterTest
-
-### 0.1 (2013-11-17)
+### 0.1 (2013-12-07)
 
 Initial release with these features:
 
-* LatLongValue
-* GlobeCoordinateValue
-* GeoCoordinateFormatter
-* GlobeCoordinateFormatter
-* DdCoordinateParser
-* DmCoordinateParser
-* DmsCoordinateParser
-* FloatCoordinateParser
-* GeoCoordinateParser
-* GlobeCoordinateParser
+* MessageBuilder
+* MessageTextBuilder
 
 ## Links
 
-* [DataValues Geo on Packagist](https://packagist.org/packages/data-values/geo)
-* [DataValues Geo on TravisCI](https://travis-ci.org/DataValues/Geo)
+* [i18n on Packagist](https://packagist.org/packages/jeroen-de-dauw/i18n)
+* [i18n on TravisCI](https://travis-ci.org/JeroenDeDauw/i18n)
