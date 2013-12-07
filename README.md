@@ -5,6 +5,8 @@ functionality. The aim of this library is to collect the code needed by any exte
 MediaWiki that wants to use the MediaWiki i18n system though at the same time not fall victim
 to the design issues of its code.
 
+MediaWiki 1.20 or later is required.
+
 [![Build Status](https://secure.travis-ci.org/JeroenDeDauw/i18n.png?branch=master)](http://travis-ci.org/JeroenDeDauw/i18n)
 
 On [Packagist](https://packagist.org/packages/jeroen-de-dauw/i18n):
