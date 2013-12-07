@@ -1,7 +1,9 @@
 # i18n
 
-Library that provides a simple internationalization interface. It also
-includes an adapter for the native MediaWiki i18n functionality.
+Library that provides a simple i18n message interface that wraps some of the MediaWiki i18n
+functionality. The aim of this library is to collect the code needed by any extension to
+MediaWiki that wants to use the MediaWiki i18n system though at the same time not fall victim
+to the design issues of its code.
 
 [![Build Status](https://secure.travis-ci.org/JeroenDeDauw/i18n.png?branch=master)](http://travis-ci.org/JeroenDeDauw/i18n)
 
