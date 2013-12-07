@@ -36,9 +36,6 @@ Get the code of this package, either via git, or some other means. Also get all 
 You can find a list of the dependencies in the "require" section of the composer.json file.
 Then take care of autoloading the classes defined in the src directory.
 
-## Library functionality
-
-
 ## Authors
 
 i18n has been written by [Jeroen De Dauw] (https://github.com/JeroenDeDauw), partially
