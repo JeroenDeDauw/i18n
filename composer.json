@@ -22,7 +22,7 @@
 	},
 	"autoload": {
 		"files" : [
-			"Geo.php"
+			"i18n.php"
 		],
 		"psr-0": {
 			"i18n\\": "src"
