@@ -51,8 +51,11 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 Initial release with these features:
 
 * MessageBuilder interface
-* MediaWiki\MessageTextBuilder implementation of MessageBuilder
-* MediaWiki\MessageObjectBuilder
+* MediaWiki specific implementation
+	* MediaWiki\MessageTextBuilder implementation of MessageBuilder
+	* MediaWiki\MessageObjectBuilder to construct Message objects
+	* MediaWiki\MessageBuilderFactory for construction of the message builders
+	* MediaWiki\LanguageTypes enum with the available language types
 
 ## Links
 
