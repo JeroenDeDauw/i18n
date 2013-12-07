@@ -2,11 +2,11 @@
 
 namespace Tests\Unit\i18n;
 
+use i18n\MediaWiki\MessageTextBuilder;
 use PHPUnit_Framework_MockObject_Matcher_Parameters;
-use i18n\MessageTextBuilder;
 
 /**
- * @covers i18n\MessageTextBuilder
+ * @covers i18n\MediaWiki\MessageTextBuilder
  *
  * @group i18n
  *
@@ -76,7 +76,7 @@ class MessageTextBuilderTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	private function newMockMessageBuilder() {
-		$context = $this->getMockBuilder( 'i18n\MessageBuilder' )
+		$context = $this->getMockBuilder( 'i18n\MediaWiki\MessageObjectBuilder' )
 			->disableOriginalConstructor()->getMock();
 
 		$invocationMocker = $context->expects( $this->once() )

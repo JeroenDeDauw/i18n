@@ -1,7 +1,8 @@
 <?php
 
-namespace i18n;
+namespace i18n\MediaWiki;
 
+use i18n\MessageBuilder;
 use Message;
 use RuntimeException;
 
@@ -12,11 +13,11 @@ use RuntimeException;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class MessageTextBuilder {
+class MessageTextBuilder implements MessageBuilder {
 
 	private $messageBuilder;
 
-	public function __construct( MessageBuilder $builder ) {
+	public function __construct( MessageObjectBuilder $builder ) {
 		$this->messageBuilder = $builder;
 	}
 

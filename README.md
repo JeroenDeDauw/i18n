@@ -50,8 +50,9 @@ as [Wikimedia Germany](https://wikimedia.de) employee for the [Wikidata project]
 
 Initial release with these features:
 
-* MessageBuilder
-* MessageTextBuilder
+* MessageBuilder interface
+* MediaWiki\MessageTextBuilder implementation of MessageBuilder
+* MediaWiki\MessageObjectBuilder
 
 ## Links
 

@@ -2,27 +2,28 @@
 
 namespace Tests\Unit\i18n;
 
+use i18n\MediaWiki\LanguageTypes;
+use i18n\MediaWiki\MessageObjectBuilder;
 use PHPUnit_Framework_MockObject_Matcher_Parameters;
-use i18n\MessageBuilder;
 
 /**
- * @covers i18n\MessageBuilder
+ * @covers i18n\MediaWiki\MessageObjectBuilder
  *
  * @group i18n
  *
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class MessageBuilderTest extends \PHPUnit_Framework_TestCase {
+class MessageObjectBuilderTest extends \PHPUnit_Framework_TestCase {
 
 	public function msgProvider() {
 		return array(
 			array(
-				MessageBuilder::CONTENT_LANGUAGE,
+				LanguageTypes::CONTENT_LANGUAGE,
 				array(),
 			),
 			array(
-				MessageBuilder::CONTENT_LANGUAGE,
+				LanguageTypes::CONTENT_LANGUAGE,
 				array(
 					'foo',
 					false,
@@ -30,7 +31,7 @@ class MessageBuilderTest extends \PHPUnit_Framework_TestCase {
 				),
 			),
 			array(
-				MessageBuilder::INTERFACE_LANGUAGE,
+				LanguageTypes::INTERFACE_LANGUAGE,
 				array(
 					'foo'
 				),
@@ -62,7 +63,7 @@ class MessageBuilderTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	protected function newMessageBuilder( $message ) {
-		$messageBuilder = new MessageBuilder(
+		$messageBuilder = new MessageObjectBuilder(
 			$this->newMockContext( $message, $this->someMessageArguments ),
 			$this->languageType
 		);
