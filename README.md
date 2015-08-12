@@ -2,8 +2,8 @@
 
 Library that provides a simple i18n message interface that wraps some of the MediaWiki i18n
 functionality. The aim of this library is to collect the code needed by any extension to
-MediaWiki that wants to use the MediaWiki i18n system though at the same time not fall victim
-to the design issues of its code.
+MediaWiki that wants to use the MediaWiki i18n system though at the same time not bind to 
+the MediaWiki framework.
 
 MediaWiki 1.20 or later is required.
 
